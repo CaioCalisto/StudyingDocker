@@ -1,0 +1,9 @@
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\Publish\MyFirstAPI.Domain.deps.json
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\Publish\MyFirstAPI.Domain.dll
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\Publish\MyFirstAPI.Domain.pdb
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Domain\obj\Release\netstandard2.0\MyFirstAPI.Domain.csprojAssemblyReference.cache
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Domain\obj\Release\netstandard2.0\MyFirstAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Domain\obj\Release\netstandard2.0\MyFirstAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Domain\obj\Release\netstandard2.0\MyFirstAPI.Domain.AssemblyInfo.cs
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Domain\obj\Release\netstandard2.0\MyFirstAPI.Domain.dll
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Domain\obj\Release\netstandard2.0\MyFirstAPI.Domain.pdb

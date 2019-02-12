@@ -1,0 +1,14 @@
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\bin\Debug\netstandard2.0\MyFirstAPI.Application.deps.json
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\bin\Debug\netstandard2.0\MyFirstAPI.Application.dll
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\bin\Debug\netstandard2.0\MyFirstAPI.Application.pdb
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\bin\Debug\netstandard2.0\MyFirstAPI.Domain.dll
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\bin\Debug\netstandard2.0\MyFirstAPI.Infrastructure.dll
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\bin\Debug\netstandard2.0\MyFirstAPI.Domain.pdb
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\bin\Debug\netstandard2.0\MyFirstAPI.Infrastructure.pdb
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\obj\Debug\netstandard2.0\MyFirstAPI.Application.csprojAssemblyReference.cache
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\obj\Debug\netstandard2.0\MyFirstAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\obj\Debug\netstandard2.0\MyFirstAPI.Application.AssemblyInfoInputs.cache
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\obj\Debug\netstandard2.0\MyFirstAPI.Application.AssemblyInfo.cs
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\obj\Debug\netstandard2.0\MyFirstAPI.Application.csproj.CopyComplete
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\obj\Debug\netstandard2.0\MyFirstAPI.Application.dll
+C:\Users\Caio\Documents\Estudo\Docker\Hexagonal_1\src\api\MyFirstAPI.Application\obj\Debug\netstandard2.0\MyFirstAPI.Application.pdb
