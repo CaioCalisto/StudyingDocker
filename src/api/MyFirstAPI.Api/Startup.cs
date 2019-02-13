@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using MediatR;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using MyFirstAPI.Infrastructure.SqlDatabase;
 using MyFirstAPI.Infrastructure.SqlDatabase.Adapter;
 using MyFirstAPI.Infrastructure.SqlDatabase.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
+using System;
 
 namespace MyFirstAPI.Api
 {
@@ -33,6 +35,8 @@ namespace MyFirstAPI.Api
             {
                 options.UseSqlServer(Configuration["ConnectionString"]);
             });
+            services.AddMediatR(AppDomain.CurrentDomain.Load("MyFirstAPI.Application"));
+            services.AddMediatR(AppDomain.CurrentDomain.Load("MyFirstAPI.Infrastructure"));
             services.AddTransient<IProductRepository, ProductSqlRepositoryAdapter>();
             services.AddTransient<IProductSqlRepository, ProductSqlRepository>();
         }

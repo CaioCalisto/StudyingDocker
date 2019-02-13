@@ -22,13 +22,13 @@ namespace MyFirstAPI.Api.Controllers
             this.productRepository = productRepository;
         }
 
-        [HttpGet("sqlserver")]
+        [HttpGet]
         public ActionResult<IEnumerable<Product>> Get()
         {
             return this.Ok(this.productRepository.GetAllAsync());
         }
 
-        [HttpPost("sqlserver")]
+        [HttpPost]
         public async Task<ActionResult> CreateProduct([FromBody]CreateProductCommand createProductCommand)
         {
             try

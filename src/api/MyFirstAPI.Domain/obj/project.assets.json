@@ -52,12 +52,10 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "TI+cJBq1mcSqE4o9VDuALOxH7TjLgsG/q8v4R5Brq3kbVH2oARkg8QN0BW7KcqtRhU+lxplyDzmGzVhXXOP9vA==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -202,23 +200,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Caio\\.nuget\\packages\\": {},
+    "C:\\Users\\360Imprimir\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Caio\\Documents\\Estudo\\Docker\\Hexagonal_1\\src\\api\\MyFirstAPI.Domain\\MyFirstAPI.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\360Imprimir\\Documents\\Projetos360Imprimir\\Estudo\\Docker\\StudyingDocker\\src\\api\\MyFirstAPI.Domain\\MyFirstAPI.Domain.csproj",
       "projectName": "MyFirstAPI.Domain",
-      "projectPath": "C:\\Users\\Caio\\Documents\\Estudo\\Docker\\Hexagonal_1\\src\\api\\MyFirstAPI.Domain\\MyFirstAPI.Domain.csproj",
-      "packagesPath": "C:\\Users\\Caio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Caio\\Documents\\Estudo\\Docker\\Hexagonal_1\\src\\api\\MyFirstAPI.Domain\\obj\\",
+      "projectPath": "C:\\Users\\360Imprimir\\Documents\\Projetos360Imprimir\\Estudo\\Docker\\StudyingDocker\\src\\api\\MyFirstAPI.Domain\\MyFirstAPI.Domain.csproj",
+      "packagesPath": "C:\\Users\\360Imprimir\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\360Imprimir\\Documents\\Projetos360Imprimir\\Estudo\\Docker\\StudyingDocker\\src\\api\\MyFirstAPI.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Caio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\360Imprimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

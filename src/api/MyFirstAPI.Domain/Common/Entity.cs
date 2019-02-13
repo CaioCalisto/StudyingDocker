@@ -12,9 +12,13 @@ namespace MyFirstAPI.Domain.Common
             get { return this.domainEvents.AsReadOnly(); }
         }
 
+        public Entity()
+        {
+            this.domainEvents = new List<INotification>();
+        }
+
         public void AddDomainEvent(INotification eventItem)
         {
-            domainEvents = domainEvents ?? new List<INotification>();
             domainEvents.Add(eventItem);
         }
 
