@@ -1,0 +1,90 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#Visual Studio files
+*.[Oo]bj
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+!*m360imprimir.lib
+!*m360imprimir.api.lib
+!*360EPMailer.lib
+*.sbr
+*.sdf
+*.opensdf
+*.dbmdl
+ipch/
+obj/
+[Bb]in
+[Bb]in/[Dd]ebug*/
+[Bb]in/[Rr]elease*/
+Ankh.NoLoad
+*.Publish.xml
+*.jfm
+*.vs
+
+#NuGet packages folder
+packages
+
+#Node modules folder
+node_modules
+
+#Javascript coverage folder
+coverage
+
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+
+#Project files
+[Bb]uild/
+
+#Subversion files
+.svn
+*.orig
+
+# Office Temp Files
+~$*
+
+# Javascript project files
+*.project
+*.sublime-project
+*.sublime-workspace
+
+# Elmah
+**/App_Data/ELMAH_Logs
+
+# App configurations
+**/App_Config/AppData.settings.json
+!**/BSImprimir.Core.UnitTests/App_Config/Environment
+
+
+# Callas
+**/Callas Resources/License.txt
+**/Callas Resources/License.txt
+
+# Javascript bundles
+**/*.bundle.js
+**/*.bundle.js.map
+**/*.bundle.min.js
+
+# Css bundles
+**/*.bundle.css
+**/*.bundle.css.map
+**/*.bundle.min.css
+
