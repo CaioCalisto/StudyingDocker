@@ -11,6 +11,7 @@ using MyFirstAPI.Infrastructure.SqlDatabase.Adapter;
 using MyFirstAPI.Infrastructure.SqlDatabase.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
+using System.Reflection;
 
 namespace MyFirstAPI.Api
 {
@@ -31,10 +32,11 @@ namespace MyFirstAPI.Api
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
-            services.AddDbContext<ProductSqlContext>(options =>
-            {
-                options.UseSqlServer(Configuration["ConnectionString"]);
-            });
+            //services.AddDbContext<ProductSqlContext>(options =>
+            //{
+            //    options.UseSqlServer(Configuration["ConnectionString"]);
+            //});
+            services.AddCustomDbContext(Configuration);
             services.AddMediatR(AppDomain.CurrentDomain.Load("MyFirstAPI.Application"));
             services.AddMediatR(AppDomain.CurrentDomain.Load("MyFirstAPI.Infrastructure"));
             services.AddTransient<IProductRepository, ProductSqlRepositoryAdapter>();
@@ -59,6 +61,27 @@ namespace MyFirstAPI.Api
             });
             app.UseHttpsRedirection();
             app.UseMvc();
+        }
+    }
+
+    static class CustomExtensionsMethods
+    {
+        public static IServiceCollection AddCustomDbContext(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddEntityFrameworkSqlServer()
+                   .AddDbContext<ProductSqlContext>(options =>
+                   {
+                       options.UseSqlServer(configuration["ConnectionString"],
+                           sqlServerOptionsAction: sqlOptions =>
+                           {
+                               sqlOptions.MigrationsAssembly(typeof(Startup).GetTypeInfo().Assembly.GetName().Name);
+                               sqlOptions.EnableRetryOnFailure(maxRetryCount: 10, maxRetryDelay: TimeSpan.FromSeconds(30), errorNumbersToAdd: null);
+                           });
+                   },
+                       ServiceLifetime.Scoped  //Showing explicitly that the DbContext is shared across the HTTP request scope (graph of objects started in the HTTP request)
+                   );
+
+            return services;
         }
     }
 }

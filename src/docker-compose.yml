@@ -4,10 +4,10 @@ services:
     sql.data:
         image: microsoft/mssql-server-linux:2017-latest
         environment:
-            SA_PASSWORD: "Pass@word"
-            ACCEPT_EULA: "Y"
+            SA_PASSWORD: 'Pass@word'
+            ACCEPT_EULA: 'Y'
         ports:
-            - "5433:5433"
+            - "1433:1433"
             
     nosql.data:
         image: mongo
