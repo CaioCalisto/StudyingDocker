@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MyFirstAPI.Application.SQLServer.Commands;
+using MyFirstAPI.Application.SQLServer.Queries;
 using MyFirstAPI.Domain;
-using MyFirstAPI.Domain.Ports;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -14,12 +14,12 @@ namespace MyFirstAPI.Api.Controllers
     public class ProductsController : ControllerBase
     {
         private IMediator mediator;
-        private IProductRepository productRepository;
+        private IProductQueries productQueries;
 
-        public ProductsController(IMediator mediator, IProductRepository productRepository)
+        public ProductsController(IMediator mediator, IProductQueries productQueries)
         {
             this.mediator = mediator;
-            this.productRepository = productRepository;
+            this.productQueries = productQueries;
         }
 
         [HttpGet]
@@ -27,7 +27,7 @@ namespace MyFirstAPI.Api.Controllers
         {
             try
             {
-                IEnumerable<Product> results = await this.productRepository.GetAllAsync();
+                IEnumerable<Product> results = await this.productQueries.GetAll();
                 return this.Ok(results);
             }
             catch(Exception ex)

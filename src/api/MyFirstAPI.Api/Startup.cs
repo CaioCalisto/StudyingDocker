@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MyFirstAPI.Application.SQLServer.Queries;
 using MyFirstAPI.Domain.Ports;
 using MyFirstAPI.Infrastructure.SqlDatabase;
 using MyFirstAPI.Infrastructure.SqlDatabase.Adapter;
@@ -41,6 +42,7 @@ namespace MyFirstAPI.Api
             services.AddMediatR(AppDomain.CurrentDomain.Load("MyFirstAPI.Infrastructure"));
             services.AddTransient<IProductRepository, ProductSqlRepositoryAdapter>();
             services.AddTransient<IProductSqlRepository, ProductSqlRepository>();
+            services.AddTransient<IProductQueries>(s => new ProductQueries(Configuration["ConnectionString"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
