@@ -23,9 +23,17 @@ namespace MyFirstAPI.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Product>> Get()
+        public async Task<ActionResult<IEnumerable<Product>>> Get()
         {
-            return this.Ok(this.productRepository.GetAllAsync());
+            try
+            {
+                IEnumerable<Product> results = await this.productRepository.GetAllAsync();
+                return this.Ok(results);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex);
+            } 
         }
 
         [HttpPost]
