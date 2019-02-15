@@ -7,6 +7,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MyFirstAPI.Application.SQLServer.Queries;
 using MyFirstAPI.Domain.Ports;
+using MyFirstAPI.Infrastructure.NoSqlDatabase;
+using MyFirstAPI.Infrastructure.NoSqlDatabase.Adapters;
+using MyFirstAPI.Infrastructure.NoSqlDatabase.Repositories;
 using MyFirstAPI.Infrastructure.SqlDatabase;
 using MyFirstAPI.Infrastructure.SqlDatabase.Adapter;
 using MyFirstAPI.Infrastructure.SqlDatabase.Repositories;
@@ -24,8 +27,7 @@ namespace MyFirstAPI.Api
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -33,19 +35,17 @@ namespace MyFirstAPI.Api
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
-            //services.AddDbContext<ProductSqlContext>(options =>
-            //{
-            //    options.UseSqlServer(Configuration["ConnectionString"]);
-            //});
             services.AddCustomDbContext(Configuration);
             services.AddMediatR(AppDomain.CurrentDomain.Load("MyFirstAPI.Application"));
             services.AddMediatR(AppDomain.CurrentDomain.Load("MyFirstAPI.Infrastructure"));
             services.AddTransient<IProductRepository, ProductSqlRepositoryAdapter>();
+            services.AddTransient<IBrandRepository, BrandMongoRepositoryAdapter>();
             services.AddTransient<IProductSqlRepository, ProductSqlRepository>();
+            services.AddTransient<IBrandMongoRepository, BrandMongoRepository>();
+            services.AddTransient<IMyMongoContext, MyMongoContext>();
             services.AddTransient<IProductQueries>(s => new ProductQueries(Configuration["ConnectionString"]));
         }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -71,7 +71,7 @@ namespace MyFirstAPI.Api
         public static IServiceCollection AddCustomDbContext(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddEntityFrameworkSqlServer()
-                   .AddDbContext<ProductSqlContext>(options =>
+                   .AddDbContext<MySqlContext>(options =>
                    {
                        options.UseSqlServer(configuration["ConnectionString"],
                            sqlServerOptionsAction: sqlOptions =>

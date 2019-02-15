@@ -9,12 +9,12 @@ using MyFirstAPI.Domain.Common;
 
 namespace MyFirstAPI.Infrastructure.SqlDatabase
 {
-    public class ProductSqlContext : DbContext, IUnitOfWork
+    public class MySqlContext : DbContext, IUnitOfWork
     {
         private readonly IMediator _mediator;
         private IDbContextTransaction transaction;
 
-        public ProductSqlContext(DbContextOptions<ProductSqlContext> options, IMediator mediator)
+        public MySqlContext(DbContextOptions<MySqlContext> options, IMediator mediator)
             : base(options)
         {
             this._mediator = mediator;

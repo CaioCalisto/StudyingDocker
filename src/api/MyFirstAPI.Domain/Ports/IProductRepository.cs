@@ -9,6 +9,5 @@ namespace MyFirstAPI.Domain.Ports
         Product Add(Product product);
         void Update(Product product);
         Task<Product> GetAsync(string id);
-        Task<IEnumerable<Product>> GetAllAsync();
     }
 }

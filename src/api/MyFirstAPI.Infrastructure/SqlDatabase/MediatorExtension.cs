@@ -7,7 +7,7 @@ namespace MyFirstAPI.Infrastructure.SqlDatabase
 {
     public static class MediatorExtension
     {
-        public static async Task DispatchDomainEventsAsync(this IMediator mediator, ProductSqlContext ctx)
+        public static async Task DispatchDomainEventsAsync(this IMediator mediator, MySqlContext ctx)
         {
             var domainEntities = ctx.ChangeTracker
                 .Entries<Entity>()

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "eb5b9f4c2238dfaa5a7fc963eb5de600bf300261"
+    "signature": "eb9882266324a840b9921746b84ff03301193d45"
   },
   "compilationOptions": {
     "defines": [
@@ -40,6 +40,22 @@
         },
         "compile": {
           "MyFirstAPI.Api.dll": {}
+        }
+      },
+      "Dapper/1.50.7": {
+        "dependencies": {
+          "System.Data.SqlClient": "4.6.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dapper.dll": {
+            "assemblyVersion": "1.50.0.0",
+            "fileVersion": "1.50.7.22"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Dapper.dll": {}
         }
       },
       "DnsClient/1.0.7": {
@@ -435,7 +451,7 @@
           "System.Reflection": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -635,6 +651,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Reflection.TypeExtensions/4.4.0": {},
       "System.Security.SecureString/4.0.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0",
@@ -683,9 +700,11 @@
       },
       "MyFirstAPI.Application/1.0.0": {
         "dependencies": {
+          "Dapper": "1.50.7",
           "MediatR": "6.0.0",
           "MyFirstAPI.Domain": "1.0.0",
-          "MyFirstAPI.Infrastructure": "1.0.0"
+          "MyFirstAPI.Infrastructure": "1.0.0",
+          "System.Data.SqlClient": "4.6.0"
         },
         "runtime": {
           "MyFirstAPI.Application.dll": {}
@@ -2045,7 +2064,7 @@
           "System.Collections": "4.3.0",
           "System.IO": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
           "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
@@ -2963,7 +2982,7 @@
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -3095,7 +3114,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -3191,7 +3210,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -3261,13 +3280,6 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0",
           "Microsoft.NETCore.Targets": "2.0.0",
-          "System.Runtime": "4.3.0"
-        },
-        "compileOnly": true
-      },
-      "System.Reflection.TypeExtensions/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0"
         },
         "compileOnly": true
@@ -3693,7 +3705,7 @@
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -3739,6 +3751,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Dapper/1.50.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NHdMLDcC6XtLkJgvTAtkS98buUr1+dPKjeiGvsRgj1t+sbcISyUitlATvc7IWrF8lcWE25qwTkHi8vs+tF2noQ==",
+      "path": "dapper/1.50.7",
+      "hashPath": "dapper.1.50.7.nupkg.sha512"
     },
     "DnsClient/1.0.7": {
       "type": "package",
@@ -3956,6 +3975,13 @@
       "sha512": "sha512-0lx/dSNRaBxAr6O5eKXiRvDNOCq2baya7Cv0xtzkOuRo/4NcD05BfELlbv94Zp5ftWOSPFIt68U9L7ivi/5KHw==",
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.TypeExtensions/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dkmh/ySlwnXJp/1qYP9uyKkCK1CXR/REFzl7abHcArxBcV91mY2CgrrzSRA5Z/X4MevJWwXsklGRdR3A7K9zbg==",
+      "path": "system.reflection.typeextensions/4.4.0",
+      "hashPath": "system.reflection.typeextensions.4.4.0.nupkg.sha512"
     },
     "System.Security.SecureString/4.0.0": {
       "type": "package",
@@ -5623,13 +5649,6 @@
       "sha512": "sha512-k+gJ9vi0MSSQpZHzHBQTiwGJ4u7Db2q8xFSXdB7OH7iKl1/HWJT79TCLyHBmZY51+C0sX3iNoAamP5Rzc7zuQw==",
       "path": "system.reflection.primitives/4.3.0",
       "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
-    },
-    "System.Reflection.TypeExtensions/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-NtD4WqtR7BL44q0rWbVCCFMr3tln5WA+5vRwJTURvgFkdCjEUO7kJfwnywyW15dM+9wFhxL2hCRN+qeNj/F+jA==",
-      "path": "system.reflection.typeextensions/4.3.0",
-      "hashPath": "system.reflection.typeextensions.4.3.0.nupkg.sha512"
     },
     "System.Resources.ResourceManager/4.3.0": {
       "type": "package",

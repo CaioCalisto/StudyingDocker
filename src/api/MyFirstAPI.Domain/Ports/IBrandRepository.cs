@@ -9,6 +9,5 @@ namespace MyFirstAPI.Domain.Ports
         Brand Add(Brand brand);
         void Update(Brand brand);
         Task<Brand> GetAsync(string id);
-        Task<IEnumerable<Brand>> GetAllAsync();
     }
 }

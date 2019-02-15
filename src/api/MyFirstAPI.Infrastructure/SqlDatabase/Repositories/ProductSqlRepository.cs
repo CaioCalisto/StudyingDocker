@@ -7,9 +7,9 @@ namespace MyFirstAPI.Infrastructure.SqlDatabase.Repositories
 {
     public class ProductSqlRepository : IProductSqlRepository
     {
-        public ProductSqlContext Context { get; }
+        public MySqlContext Context { get; }
 
-        public ProductSqlRepository(ProductSqlContext context)
+        public ProductSqlRepository(MySqlContext context)
         {
             this.Context = context;
         }
@@ -30,10 +30,5 @@ namespace MyFirstAPI.Infrastructure.SqlDatabase.Repositories
             this.Context.Entry(product).State = EntityState.Modified;
         }
 
-        public async Task<IEnumerable<Product>> GetAll()
-        {
-            List<Product> products = await this.Context.Products.ToListAsync();
-            return products;
-        }
     }
 }

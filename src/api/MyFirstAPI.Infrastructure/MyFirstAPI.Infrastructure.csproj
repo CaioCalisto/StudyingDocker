@@ -10,10 +10,6 @@
     <PackageReference Include="MongoDB.Driver" Version="2.7.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="NoSqlDatabase\" />
-  </ItemGroup>
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>

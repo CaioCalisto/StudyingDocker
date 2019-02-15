@@ -2,7 +2,6 @@
 using MyFirstAPI.Domain.Common;
 using MyFirstAPI.Domain.Ports;
 using MyFirstAPI.Infrastructure.SqlDatabase.Repositories;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace MyFirstAPI.Infrastructure.SqlDatabase.Adapter
@@ -37,9 +36,5 @@ namespace MyFirstAPI.Infrastructure.SqlDatabase.Adapter
             this.productSqlRepository.Update(product);
         }
 
-        public async Task<IEnumerable<Product>> GetAllAsync()
-        {
-            return await this.productSqlRepository.GetAll();
-        }
     }
 }

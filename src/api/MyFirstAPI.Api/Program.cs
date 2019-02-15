@@ -17,7 +17,7 @@ namespace MyFirstAPI.Api
                 IServiceProvider services = scope.ServiceProvider;
                 try
                 {
-                    ProductSqlContext context = services.GetRequiredService<ProductSqlContext>();
+                    MySqlContext context = services.GetRequiredService<MySqlContext>();
                     context.Database.EnsureCreated();
                 }
                 catch (Exception ex)
