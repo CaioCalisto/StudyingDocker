@@ -22,8 +22,9 @@ namespace MyFirstAPI.Application.MongoDB.Commands
                 Name = request.Name,
                 Country = request.Country
             };
+            await this.brandRepository.UnitOfWork.BeginTransactionAsync();
             this.brandRepository.Add(brand);
-            await this.brandRepository.UnitOfWork.SaveEntitiesAsync();
+            await this.brandRepository.UnitOfWork.CommitTransactionAsync();
             return true;
         }
     }

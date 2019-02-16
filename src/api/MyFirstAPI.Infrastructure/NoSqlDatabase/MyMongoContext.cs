@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 using MyFirstAPI.Domain;
-using MyFirstAPI.Domain.Common;
 
 namespace MyFirstAPI.Infrastructure.NoSqlDatabase
 {
@@ -26,6 +25,7 @@ namespace MyFirstAPI.Infrastructure.NoSqlDatabase
 
         public Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
+            // TODO
             return Task.FromResult(true);
         }
 

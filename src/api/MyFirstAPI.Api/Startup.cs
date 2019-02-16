@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MyFirstAPI.Application.MongoDB.Queries;
 using MyFirstAPI.Application.SQLServer.Queries;
 using MyFirstAPI.Domain.Ports;
 using MyFirstAPI.Infrastructure.NoSqlDatabase;
@@ -44,6 +45,7 @@ namespace MyFirstAPI.Api
             services.AddTransient<IBrandMongoRepository, BrandMongoRepository>();
             services.AddTransient<IMyMongoContext, MyMongoContext>();
             services.AddTransient<IProductQueries>(s => new ProductQueries(Configuration["ConnectionString"]));
+            services.AddTransient<IBrandQueries>(s => new BrandQueries(Configuration["MongoConnectionString"], Configuration["MongoDatabase"]));
         }
         
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
