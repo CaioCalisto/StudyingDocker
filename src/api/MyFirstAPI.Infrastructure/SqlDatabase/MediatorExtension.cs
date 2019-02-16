@@ -1,5 +1,7 @@
 ﻿using MediatR;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using MyFirstAPI.Domain.Common;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,18 +11,18 @@ namespace MyFirstAPI.Infrastructure.SqlDatabase
     {
         public static async Task DispatchDomainEventsAsync(this IMediator mediator, MySqlContext ctx)
         {
-            var domainEntities = ctx.ChangeTracker
+            IEnumerable<EntityEntry<Entity>> domainEntities = ctx.ChangeTracker
                 .Entries<Entity>()
                 .Where(x => x.Entity.DomainEvents != null && x.Entity.DomainEvents.Any());
 
-            var domainEvents = domainEntities
+            List<INotification> domainEvents = domainEntities
                 .SelectMany(x => x.Entity.DomainEvents)
                 .ToList();
 
             domainEntities.ToList()
                 .ForEach(entity => entity.Entity.ClearDomainEvents());
 
-            var tasks = domainEvents
+            IEnumerable<Task> tasks = domainEvents
                 .Select(async (domainEvent) => {
                     await mediator.Publish(domainEvent);
                 });
