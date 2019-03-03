@@ -20,9 +20,6 @@
 *.ilk
 *.log
 *.lib
-!*m360imprimir.lib
-!*m360imprimir.api.lib
-!*360EPMailer.lib
 *.sbr
 *.sdf
 *.opensdf
@@ -46,11 +43,6 @@ node_modules
 #Javascript coverage folder
 coverage
 
-#Tooling
-_ReSharper*/
-*.resharper
-[Tt]est[Rr]esult*
-
 #Project files
 [Bb]uild/
 
@@ -61,30 +53,6 @@ _ReSharper*/
 # Office Temp Files
 ~$*
 
-# Javascript project files
-*.project
-*.sublime-project
-*.sublime-workspace
-
-# Elmah
-**/App_Data/ELMAH_Logs
-
-# App configurations
-**/App_Config/AppData.settings.json
-!**/BSImprimir.Core.UnitTests/App_Config/Environment
 
 
-# Callas
-**/Callas Resources/License.txt
-**/Callas Resources/License.txt
-
-# Javascript bundles
-**/*.bundle.js
-**/*.bundle.js.map
-**/*.bundle.min.js
-
-# Css bundles
-**/*.bundle.css
-**/*.bundle.css.map
-**/*.bundle.min.css
 
