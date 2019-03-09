@@ -2,7 +2,7 @@
 [Tt]humbs.db
 *.DS_Store
 
-#Visual Studio files
+#Visual Studio files  
 *.[Oo]bj
 *.user
 *.aps
