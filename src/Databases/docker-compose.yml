@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+    sql.data:
+        image: microsoft/mssql-server-linux:2017-latest
+        environment:
+            SA_PASSWORD: 'Pass@word'
+            ACCEPT_EULA: 'Y'
+            
+    nosql.data:
+        image: mongo
+
+    api:
+        build: ./api
+        ports:
+            - "5000:80"
+        depends_on:
+            - sql.data
+            - nosql.data
