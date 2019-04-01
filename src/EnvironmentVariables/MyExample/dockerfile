@@ -1,0 +1,11 @@
+FROM microsoft/dotnet:2.0-sdk
+
+COPY ./ ./
+
+RUN dotnet restore
+
+RUN dotnet publish -c Release -o out
+
+ENV MyCustomVariable="Welcome to my world"
+
+ENTRYPOINT ["dotnet", "MyExample/out/MyExample.dll"]
