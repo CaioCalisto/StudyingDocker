@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  myfirstapi.api:
+    image: myfirstapiapi
+    build:
+      context: .
+      dockerfile: MyFirstAPI.Api/Dockerfile
+    extra_hosts:
+      - "sql.data:10.0.75.1"
+      - "nosql.data:10.0.75.1"
